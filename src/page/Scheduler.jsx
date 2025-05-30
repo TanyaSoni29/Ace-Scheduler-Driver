@@ -28,7 +28,6 @@ import {
 import isLightColor from '../utils/isLight';
 import Modal from '../components/Modal';
 import CustomDialog from '../components/CustomDialog';
-import ProtectedRoute from '../utils/Protected';
 import Snackbar from '../components/Snackbar-v2';
 import { getAllDrivers } from '../utils/apiReq';
 
@@ -320,7 +319,7 @@ const AceScheduler = () => {
 
 	// console.log('active Date in Scheduler----', activeDate);
 	return (
-		<ProtectedRoute>
+		<>
 			<Snackbar />
 			{/* {searchLoading && <Loader />} */}
 
@@ -501,7 +500,7 @@ const AceScheduler = () => {
 					<ConfirmSoftAllocateModal setConfirmSoftModal={setConfirmSoftModal} />
 				</Modal>
 			)} */}
-		</ProtectedRoute>
+		</>
 	);
 };
 export default AceScheduler;
