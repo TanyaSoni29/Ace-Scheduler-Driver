@@ -10,7 +10,6 @@ function App() {
 
 		if (token) {
 			localStorage.setItem('authToken', token);
-			console.log('Token saved to localStorage:', token);
 		}
 	}, []);
 	return (
