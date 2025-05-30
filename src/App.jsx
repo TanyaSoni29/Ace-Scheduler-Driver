@@ -1,11 +1,18 @@
 /** @format */
 
-import { useParams } from 'react-router-dom';
 import AceScheduler from './page/Scheduler';
+import { useEffect } from 'react';
 
 function App() {
-	const { token } = useParams();
-	if (token) localStorage.setItem('token', token);
+	useEffect(() => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const token = urlParams.get('token');
+
+		if (token) {
+			localStorage.setItem('authToken', token);
+			console.log('Token saved to localStorage:', token);
+		}
+	}, []);
 	return (
 		<>
 			<AceScheduler />
