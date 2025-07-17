@@ -904,7 +904,7 @@ function getTodayInEnGbFormat(date) {
 
 const BookingOption = ({ text, head, link }) => {
 	const isPhoneNumber = head.toLowerCase().includes('phone') && text !== 'NA';
-	const phoneLink = isPhoneNumber ? `tel:${text}` : null;
+	const phoneLink = isPhoneNumber ? `tel://${text}` : null;
 	return (
 		<div className='flex items-start mb-1 w-full'>
 			<p className='text-md font-medium pr-2 sm:whitespace-nowrap sm:w-[30%] flex justify-start sm:justify-end sm:items-end'>
